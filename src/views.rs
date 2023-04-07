@@ -366,6 +366,11 @@ pub fn comment(comment: &Comment, show_more: bool) -> Markup {
             div class="flex-grow" {
                 div class="font-bold" {
                     (comment.author.name)
+                    @for tag in &comment.author_tag {
+                        span class="font-normal text-gray-400 text-xs ml-1 border-1 px-1 rounded-sm" {
+                            (tag.text)
+                        }
+                    }
                     @if let Some(reply_to_author) = comment.reply_to_author.as_ref() {
                         " > " (reply_to_author.name)
                     }
