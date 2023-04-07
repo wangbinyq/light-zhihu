@@ -158,4 +158,11 @@ pub struct Comment {
     pub dislike_count: u32,
     pub child_comments: Vec<Comment>,
     pub child_comment_count: u32,
+    pub author_tag: Vec<AuthorTag>,
+}
+
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+#[serde(default)]
+pub struct AuthorTag {
+    pub text: String,
 }
