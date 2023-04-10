@@ -217,9 +217,11 @@ pub async fn article(aid: Path<(String,)>) -> Result<Markup, Error> {
                             (article.voteup_count) " 赞同"
                         }
                     }
-                    @if  article.comment_count > 0{
-                        span class="mr-2" {
-                            (article.comment_count) " 条评论"
+                    @if  article.comment_count > 0 {
+                        a href=(format!("/comment/root/{}?type=articles", article.id)) {
+                            span class="mr-2" {
+                                (article.comment_count) " 条评论"
+                            }
                         }
                     }
                     @if let Some(updated_time) = article.updated_time {
