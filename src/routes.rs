@@ -443,7 +443,7 @@ fn layout(body: Markup, title: Option<&str>) -> Markup {
             meta charset="utf-8";
             meta name="viewport" content="width=device-width, initial-scale=1.0";
             link rel="shortcut icon" href="/favicon.png" type="image/png";
-            script src="https://unpkg.com/petite-vue" defer init {}
+            script src="https://cdn.jsdelivr.net/npm/petite-vue@0.4.1/dist/petite-vue.iife.min.js" defer init {}
             script src="https://cdn.twind.style" crossorigin {}
             script {
                 (PreEscaped(r#"
