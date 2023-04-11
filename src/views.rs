@@ -367,7 +367,7 @@ pub fn comment(comment: &Comment, show_more: bool) -> Markup {
                 div class="flex items-center font-bold" {
                     (comment.author.name)
                     @for tag in &comment.author_tag {
-                        span class="font-normal text-gray-400 text-xs ml-1 border-1 px-1 rounded-sm" {
+                        span class="font-normal text-gray-400 text-xs mx-1 border-1 px-1 rounded-sm" {
                             (tag.text)
                         }
                     }
