@@ -11,7 +11,7 @@ axum = "0.6.12"
 chrono = { version = "0.4.24", features = ["serde"] }
 http = "0.2.9"
 lol_html = "0.3.3"
-maud = { git = "https://github.com/lambda-fairy/maud", features = ["axum"] }
+maud = { version = "0.25.0", features = ["axum"] }
 once_cell = "1.17.1"
 regex = "1.7.3"
 reqwest = { version = "0.11.16", features = ["json", "brotli", "gzip"] }
